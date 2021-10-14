@@ -46,7 +46,7 @@ void LoadPlugins()
 	}
 }
 
-void main()
+int main(int argc, char* argv[])
 {
 	SetConfigFlags(FLAG_VSYNC_HINT);
 	InitWindow(1280, 800, "Plugin Test");
@@ -72,4 +72,6 @@ void main()
 
 	UnloadPlugins();
 	CloseWindow();
+
+	return 0;
 }

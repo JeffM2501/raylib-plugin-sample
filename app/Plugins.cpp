@@ -1,7 +1,7 @@
 #include "Plugins.h"
+#include <windows.h>
 
 #ifdef _WIN32
-#include <windows.h>
 constexpr const char PluginExtension[] = ".dll";
 #include <vector>
 std::vector<HMODULE> LoadedPlugins;
