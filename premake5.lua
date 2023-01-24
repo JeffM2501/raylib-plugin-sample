@@ -1,25 +1,20 @@
 workspace "plugin-sample"
-	configurations { "Debug","Debug.DLL", "Release", "Release.DLL" }
-	platforms { "x64"}
+	configurations { "Debug.DLL", "Release.DLL" }
+	platforms { "x64", "x86"}
 
-	filter "configurations:Debug"
-		defines { "DEBUG" }
-		symbols "On"
-		
 	filter "configurations:Debug.DLL"
 		defines { "DEBUG" }
 		symbols "On"
 
-	filter "configurations:Release"
-		defines { "NDEBUG" }
-		optimize "On"	
-		
 	filter "configurations:Release.DLL"
 		defines { "NDEBUG" }
 		optimize "On"	
 		
 	filter { "platforms:x64" }
 		architecture "x86_64"
+        
+    filter { "platforms:x86" }
+		architecture "x86"
 		
 	targetdir "bin/%{cfg.buildcfg}/"
 	
