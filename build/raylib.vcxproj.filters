@@ -12,9 +12,6 @@
     <ClInclude Include="..\raylib\src\config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\raylib\src\raudio.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\raylib\src\raylib.h">
       <Filter>Header Files</Filter>
     </ClInclude>

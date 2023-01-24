@@ -171,7 +171,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\raylib\src\config.h" />
-    <ClInclude Include="..\raylib\src\raudio.h" />
     <ClInclude Include="..\raylib\src\raylib.h" />
     <ClInclude Include="..\raylib\src\raymath.h" />
     <ClInclude Include="..\raylib\src\rcamera.h" />

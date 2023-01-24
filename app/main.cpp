@@ -34,16 +34,17 @@ void SecretFunction(float x)
 
 void LoadPlugins()
 {
-	int count = 0;
-	char** files = GetDirectoryFiles("./", &count);
-	for (int i = 0; i < count; i++)
+	FilePathList pathList = LoadDirectoryFiles("./");
+	for (unsigned int i = 0; i < pathList.count; i++)
 	{
-		const char* file = files[i];
+		const char* file = pathList.paths[i];
 
 		const char* ext = GetFileExtension(file);
 		if (ext != nullptr && IsPlugin(ext))
 			LoadPlugin(file);
 	}
+
+	UnloadDirectoryFiles(pathList);
 }
 
 int main(int argc, char* argv[])
